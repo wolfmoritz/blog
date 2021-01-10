@@ -1,0 +1,12 @@
+<?php
+/**
+ * Custom Public Application Routes
+ *
+ * Copy this file to routes.php and
+ * use example below to define custom static routes
+ */
+
+// Example public static route
+// $app->get('/custom-static-route', function ($request, $response, $args) {
+//     return (new Piton\Controllers\ControllerName($this))->MethodName($request, $response, $args);
+// });

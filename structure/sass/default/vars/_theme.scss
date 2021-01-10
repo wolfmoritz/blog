@@ -1,0 +1,157 @@
+// Color Pallette
+
+$clr-black      : rgb(26, 26, 26);
+$clr-white      : rgb(245, 245, 245);
+$clr-blue       : rgb(51, 102, 153);
+$clr-grey-light : rgb(240, 240, 240);
+$clr-grey-medium: rgb(204, 204, 204);
+$clr-grey-dark  : rgb(128, 128, 128);
+$clr-orange     : rgb(255, 120, 31);
+$clr-red        : rgb(255, 0, 0);
+$clr-green      : rgb(0, 112, 0);
+
+// Theme -- DO NOT CHANGE VARIABLE NAMES. Update the  
+
+$clr-primary      : $clr-blue;
+$clr-primary-dark : darken($clr-primary, 10);
+$clr-primary-light: lighten($clr-primary, 30);
+$clr-secondary    : adjust-hue($clr-primary, -20);
+$clr-accent       : $clr-orange;
+$clr-dark-text    : $clr-black;
+$clr-light-text   : $clr-white;
+
+
+// Default Element Styles 
+
+$bs            : 0 0 25px rgba($clr-black, .25);
+$bs-1          : 0 10px 25px rgba($clr-black, .25);
+$bs-2          : 0 20px 40px -15px rgba(black, .25);
+$bsh           : 0px 0px 10px 2px rgba($clr-black, .15); // box shadow hover
+$br            : 7px;
+$ls            : 2px;
+$ts            : 0 2px 5px rgba($clr-black, .18);
+$section-margin: 0rem;
+
+// Navigation Variables
+$nav-height: 60px;
+$nav-bg    : $clr-primary;
+$nav-text  : $clr-white;
+$nav-hover : $clr-accent;
+
+// Layout Variables
+$max-container-width: 1200px;
+
+// Media Query Breakpoints
+$breakpoint: 768px;
+
+$fw-l: 300;
+$fw-n: 400;
+$fw-m: 600;
+$fw-b: 700;
+
+$ff-serif: 'PT Serif',
+serif;
+$ff-sans: 'Open Sans',
+sans-serif;
+
+// Set the $nav-color to transparent if don't want a background color.
+$nav-bg        : $clr-primary;
+$nav-bg-opacity: 0;
+$nav-text      : $clr-white;
+$nav-accent    : $clr-accent;
+$nav-height    : 60px;
+$scale         : 0; // Scales the navigation. valid #'s 0 -> 1. Zero value is collapsed.
+
+/* 
+    CSS VARIABLES 
+
+    DO NOT CHANGE THE VARIABLE NAME INSIDE OF THE :ROOT.
+    IF YOU ARE USING SASS, CHANGE THE PROPERTY IN THE _THEME.SCSS
+    PARTIAL FILE.
+
+    IF YOU ARE USING CSS ONLY, CHANGE THE PROPERTY OF THE VARIABLE 
+    INSIDE THE MAIN.CSS AND LOGIN.CSS FILES.
+
+    THE -RGB IS THE RED/GREEN/BLUE IDENTIFIER OF THE COLOR IT
+    REPRESENTS. THIS IS USED FOR COLORS THAT USE AN ALPHA CHANNEL.
+    IF YOU UPDATE A BASE COLOR, YOU SHOULD ALSO FIND THE RGB VALUE AND REPLACE
+    THE 3 NUMBERS. THERE ARE TOOLS IN CODE EDITORS FOR THIS, OR IT IS EASILY
+    GOOGLED.
+
+    IE 
+
+    --CLR-PRIMARY: #336699; // == RGB(51, 102, 153)
+    --CLR-PRIMARY-RGB: 51,102,153;
+
+*/
+
+/* Color Theme */
+/* Color base */
+/* Color RGB Components */
+:root {
+
+  --clr-primary     : #{$clr-primary};
+  --clr-primary-rgb : #{hexToRGB($clr-primary)};
+
+  --clr-primary-dark     : #{$clr-primary-dark};
+  --clr-primary-dark-rgb : #{hexToRGB($clr-primary-dark)};
+
+  --clr-primary-light    : #{$clr-primary-light};
+  --clr-primary-light-rgb: #{hexToRGB($clr-primary-light)};
+
+  --clr-secondary     : #{$clr-secondary};
+  --clr-secondary-rgb : #{hexToRGB($clr-secondary)};
+
+  --clr-accent     : #{$clr-accent};
+  --clr-accent-rgb : #{hexToRGB($clr-accent)};
+
+  --clr-dark-text     : #{$clr-dark-text};
+  --clr-dark-text-rgb : #{hexToRGB($clr-dark-text)};
+
+  --clr-white     : #{$clr-white};
+  --clr-white-rgb : #{hexToRGB($clr-white)};
+
+  --clr-black     : #{$clr-black};
+  --clr-black-rgb : #{hexToRGB($clr-black)};
+
+  --clr-grey-dark     : #{$clr-grey-dark};
+  --clr-grey-dark-rgb : #{hexToRGB($clr-grey-dark)};
+
+  --clr-grey-medium     : #{$clr-grey-medium};
+  --clr-grey-medium-rgb : #{hexToRGB($clr-grey-medium)};
+
+  --clr-grey-light     : #{$clr-grey-light};
+  --clr-grey-light-rgb : #{hexToRGB($clr-grey-light)};
+
+  /* Default Element Styles */
+  --bs            : #{$bs}; // Box Shadow    
+  --bs-1          : #{$bs-1}; // Box Shadow 1 
+  --bs-2          : #{$bs-2}; // Box Shadow 1 
+  --bsh           : #{$bsh}; // Box Shadow Hover
+  --br            : #{$br}; // Border Radius 
+  --ls            : #{$ls}; // Letter spacing 
+  --ts            : #{$ts}; // Text Shadow 
+  --section-margin: #{$section-margin}; // Spacing between sections
+
+  /*  Navigation Styles */
+  --nav-height    : #{$nav-height};
+  --nav-bg        : #{$nav-bg};
+  --nav-bg-opacity: #{$nav-bg-opacity};
+  --nav-text      : #{$nav-text};
+  --nav-hover     : #{$nav-hover};
+  --nav-accent    : #{$nav-accent};
+  /* Layout Variables */
+  --max-width     : #{$max-container-width};
+
+  /* Media Queries */
+  --breakpoint: #{$breakpoint};
+  /* Font Families */
+  --ff-serif  : #{$ff-serif};
+  --ff-sans   : #{$ff-sans};
+
+  /* Font Weights */
+  --fw-l: #{$fw-l}; //Fontweight light
+  --fw-n: #{$fw-n}; //Fontweight normal
+  --fw-m: #{$fw-m}; //Fontweight medium
+  --fw-b: #{$fw-b}; //Fontweight bold
+}

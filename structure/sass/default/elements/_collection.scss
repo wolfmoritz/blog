@@ -1,0 +1,64 @@
+ .cards {
+   @include margin(2rem null);
+   @include padding(0);
+   list-style: none;
+
+   display              : grid;
+   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+   gap                  : 2rem;
+
+   *+* {
+     @include margin(0 null null);
+   }
+
+   .card {
+     width: 100%;
+     background-color: $clr-white;
+     border-radius   : var(--br);
+     box-shadow      : var((--bs-2));
+
+     display  : flex;
+     flex-flow: column nowrap;
+     overflow : hidden;
+
+     &__content {
+       display  : flex;
+       flex     : 1 1 auto;
+       flex-flow: column nowrap;
+       padding  : 1rem;
+     }
+
+     &__image {
+       background-position    : center center;
+       background-repeat      : no-repeat;
+       background-size        : cover;
+       border-top-left-radius : var(--br);
+       border-top-right-radius: var(--br);
+       filter                 : contrast(70%);
+       overflow               : hidden;
+       position               : relative;
+       transition             : filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+     img{
+       object-fit: contain;
+     }
+     }
+     &:hover{
+       .card__image{
+         filter: contrast(100%);
+       }
+     }
+     &__title {
+       color: var(--clr-accent);
+       font-size: 1.25rem;
+       font-weight: 300;
+       letter-spacing: 2px;
+       text-transform: uppercase;
+     }
+     &__text {
+       flex: 1 1 auto;
+       font-size: .875rem;
+       line-height: 1.5;
+       margin-bottom: 1.25rem;
+     }
+   }
+ }

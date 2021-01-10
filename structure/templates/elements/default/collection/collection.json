@@ -1,0 +1,5 @@
+{
+    "elementName": "Collection",
+    "elementDescription": "Display named collection summary links",
+    "enableInput": "collection"
+}

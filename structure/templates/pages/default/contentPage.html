@@ -1,0 +1,10 @@
+{% extends 'pages/_base_layout.html' %}
+
+{% block body %}
+{# {{ getMediaSrcSet(page.media.filename, page.media.caption) }} #}
+
+
+  {{ getBlockElementsHtml(page.blocks.contentBlock) }}
+
+
+{% endblock body %}

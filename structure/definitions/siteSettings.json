@@ -1,0 +1,109 @@
+{
+ "description": "Example site settings",
+ "settings": [
+        {
+            "category": "site",
+            "label": "Theme",
+            "key": "theme",
+            "value": "default",
+            "inputType": "select",
+            "options": [
+                {
+                    "name": "Default",
+                    "value": "default"
+                }
+            ]
+        },
+        {
+            "category": "site",
+            "label": "Google Webmaster Verification Link",
+            "key": "googleWebMaster",
+            "value": "",
+            "inputType": "text"
+        },
+        {
+            "category": "site",
+            "label": "Website Contact Email",
+            "key": "contactEmail",
+            "value": "",
+            "inputType": "email"
+        },
+        {
+            "category": "site",
+            "label": "Website Contact Phone",
+            "key": "contactPhone",
+            "value": "",
+            "inputType": "tel"
+        },
+        {
+            "category": "site",
+            "label": "Website Footer About",
+            "key": "footerAbout",
+            "value": "",
+            "inputType": "textarea"
+        },
+        {
+            "category": "site",
+            "label": "Website Author",
+            "key": "footerAuthor",
+            "value": "",
+            "inputType": "text"
+        },
+        {
+            "category": "site",
+            "label": "Website Author URL",
+            "key": "footerAuthorURL",
+            "value": "",
+            "inputType": "url"
+        },
+        {
+            "category": "site",
+            "label": "Website Contact Address",
+            "key": "contactAddress",
+            "value": "",
+            "inputType": "textarea"
+        },
+        {
+            "category": "site",
+            "label": "Google Analytics Code",
+            "key": "googleAnalytics",
+            "value": "",
+            "inputType": "textarea"
+        },
+        {
+            "category": "site",
+            "label": "Stat Counter",
+            "key": "statCounter",
+            "value": "",
+            "inputType": "textarea"
+        },
+        {
+            "category": "social",
+            "label": "Facebook Link",
+            "key": "facebookLink",
+            "value": "https://www.facebook.com",
+            "inputType": "url"
+        },
+        {
+            "category": "social",
+            "label": "Github Link",
+            "key": "githubLink",
+            "value": "https://www.github.com",
+            "inputType": "url"
+        },
+        {
+            "category": "social",
+            "label": "Twitter Link",
+            "key": "twitterLink",
+            "value": "https://twitter.com",
+            "inputType": "url"
+        },
+        {
+            "category": "social",
+            "label": "Instagram Link",
+            "key": "instagramLink",
+            "value": "https://www.instagram.com",
+            "inputType": "url"
+        }
+     ]
+}

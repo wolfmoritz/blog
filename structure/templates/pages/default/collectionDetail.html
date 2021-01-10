@@ -1,0 +1,19 @@
+{% extends 'pages/_base_layout.html' %}
+
+{% block body %}
+
+{{ getBlockElementsHtml(page.blocks.heroBlock) }}
+
+<section class="collectionDetail element">
+  <figure class="image">
+    {{ getMediaSrcSet(page.media.filename, page.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
+    <figcaption>{{ page.media.caption}}</figcaption>
+    </figure>
+
+    <div class="collectionDetail__content">
+      {{ getBlockElementsHtml(page.blocks.contentBlock) }}
+  </div>
+</section>
+
+
+{% endblock body %}

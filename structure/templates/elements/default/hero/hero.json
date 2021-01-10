@@ -1,0 +1,76 @@
+{
+    "elementName": "Hero",
+    "elementDescription": "Hero image element",
+    "enableInput": "image",
+    "settings": [
+        {
+            "category": "element",
+            "label": "Hero Image Overlay Percentage",
+            "key": "overlay",
+            "value": "",
+            "inputType": "number",
+            "help": "Creates an overlay on top of the hero image so that text is easier to read."
+        },
+        {
+            "category": "element",
+            "label": "Hero Image Overlay Color",
+            "key": "overlayColor",
+            "value": "",
+            "inputType": "select",
+            "help": "Select a color along with the overlay % to provide background color for hero image to make text move readable.",
+            "options": [{
+                    "name": "White",
+                    "value": "255,255,255"
+                },
+
+                {
+                    "name": "Black",
+                    "value": "0,0,0"
+                },
+                {
+                    "name": "Blue",
+                    "value": "51, 102, 153"
+                }
+            ]
+        },
+        {
+            "category": "element",
+            "label": "Hero Image Vertical Placement",
+            "key": "placement",
+            "value": "Center",
+            "inputType": "select",
+            "help": "Select a placement to optimze your hero image above 768px. If image appears properly, then leave this alone. The default is center",
+            "options": [{
+                    "name": "Top",
+                    "value": "top"
+                },
+
+                {
+                    "name": "Center",
+                    "value": "Center"
+                },
+
+                {
+                    "name": "Bottom",
+                    "value": "bottom"
+                }
+            ]
+        },
+        {
+            "category": "element",
+            "label": "Hero Button (Call to Action) Title",
+            "key": "ctaTitle",
+            "value": "",
+            "inputType": "text",
+            "help": "Enter Title for cta."
+        },
+        {
+            "category": "element",
+            "label": "Hero Button Link",
+            "key": "ctaTarget",
+            "value": "",
+            "inputType": "text",
+            "help": "Enter Target for cta."
+        }
+    ]
+}

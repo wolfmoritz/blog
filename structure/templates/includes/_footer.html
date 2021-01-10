@@ -1,0 +1,74 @@
+<footer class="footer ">
+
+    <div class="footer1">
+        <div class="container">
+            <div class="footer-nav">
+                <nav class="nav-footer">
+                    <h5>Navigation</h5>
+                    <ul class="nav-footer__nav">
+                        {# This example footer nav does not display drop down nav links #}
+                        {% for navItem in getNavigator('footer') %}
+                        <li class="{% if navItem.currentPage %}active{% endif %}">
+                            <a href="{{ getNavigationLink(navItem) }}">{{ navItem.title }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+
+            {% if site.settings.footerAbout %}
+            <div class="footer-about">
+                <h5>About {{ site.settings.siteName|default('Piton<span>CMS</span>') }}</h5>
+                {{ site.settings.footerAbout|nl2br}}
+            </div>
+            {% endif %}
+
+            <div class="footer-social">
+                <h5>Get Social With Us</h5>
+                <div class="get-social-icons">
+
+                    {% if site.settings.facebookLink %}
+                    <a href="{{ site.settings.facebookLink }}"><i class="social-icon fab fa-facebook fa-2x"></i></a>
+                    {% endif %}
+
+                    {% if site.settings.twitterLink %}
+                    <a href="{{ site.settings.twitterLink }}"><i class="social-icon fab fa-twitter fa-2x"></i></a>
+                    {% endif %}
+
+                    {% if site.settings.instagramLink %}
+                    <a href="{{ site.settings.instagramLink }}"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+                    {% endif %}
+
+                    {% if site.settings.githubLink %}
+                    <a href="{{ site.settings.githubLink }}"><i class="social-icon fab fa-github fa-2x"></i></a>
+                    {% endif %}
+
+                </div>
+            </div>
+            <div class="footer-address">
+
+                {% if site.settings.contactAddress %}
+                <h5>Address</h5>
+                {{ site.settings.contactAddress|nl2br}}
+                {% endif %}
+
+                {% if site.settings.contactPhone %}
+                <h5>Phone</h5>
+                <a href="tel:{{site.settings.contactPhone}}"> {{ site.settings.contactPhone }}</a>
+
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="container"></div>
+        <p>{{ site.settings.siteName|default('Piton<span>CMS</span>') }} &copy; 2018 - {{ "now"|date('Y') }}</p>
+        {% if site.settings.footerAuthor %}
+        <p>Built with <a href="http://pitoncms.com" target="_blank">PitonCMS</a> by <a
+                href="{{ site.settings.footerAuthorURL }} " target="_blank">{{
+                site.settings.footerAuthor }}</a></p>
+        {% endif %}
+    </div>
+    </div>
+</footer>

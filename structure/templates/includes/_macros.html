@@ -1,0 +1,19 @@
+{#
+    Twig HTML Component Macros
+
+    Miscellaneous reusable HTML snippets that are more than an include.
+#}
+
+{#
+    Contact Form Honeypot
+
+    Limits spam messages by populating a hidden email contact field with a known value.
+    If the value changes, the message is ignored.
+#}
+{% macro contactHoneypot() %}
+{# Keep the inline style to hide the honeypot #}
+<div style="display:none;">
+    <label>Alternate Email Address</label>
+    <input type="email" class="alt-email" name="alt-email" placeholder="Email" autocomplete="off">
+</div>
+{% endmacro contactHoneypot %}

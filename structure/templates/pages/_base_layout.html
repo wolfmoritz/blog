@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% if page.meta_description %}
+    <meta name="description" content="{{ page.meta_description }}">
+    {% endif %}
+    {% if site.settings.googleWebMaster %}
+    <meta name="google-site-verification" content="{{ site.settings.googleWebMaster }}">
+    {% endif %}
+
+    <title>{{ site.settings.siteName }}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/{{ site.settings.theme|default('default') }}/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+        integrity="sha384-s4RLYRjGGbVqKOyMGGwfxUTMOO6D7r2eom7hWZQ6BjK2Df4ZyfzLXEkonSm0KLIQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/fancybox/fancybox/fancybox.css">
+
+    {{ include('includes/_pitonConfigJs.html') }}
+</head>
+
+<body>
+    {{ include("includes/_navbar.html") }}
+    {% block hero %}
+    {% endblock hero %}
+
+
+    {% block body %}
+    <h2>Default body content</h2>
+    {% endblock %}
+
+    {{ include("includes/_footer.html") }}
+
+    <script src="{{ baseUrl() }}/admin/js/dist/front.js"></script>
+    <script src="{{ baseUrl() }}/assets/js/custom.js"></script>
+    <script src="{{ baseUrl() }}/assets/fancybox/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"
+        integrity="sha384-0H+01+wORQpYAMaLWyObzDlXZaG1Mgzrj0DsIDeQX762Cfo2fPEycKxVmhlDjSV4" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    {% if site.environment.production and site.settings.statCounter %}
+    {{ site.settings.statCounter }}
+    {% endif %}
+
+    {% if site.environment.production and site.settings.googleAnalytics %}
+    {{ site.settings.googleAnalytics }}
+    {% endif %}
+</body>
+
+</html>

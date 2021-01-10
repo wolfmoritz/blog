@@ -1,0 +1,11 @@
+# Things to ignore
+config/config.local.php
+logs/
+cache/
+.sass-cache/
+*.xml
+public/media/
+*.map
+
+# After installing PitonCMS, consider removing the vendor/ line below
+vendor/

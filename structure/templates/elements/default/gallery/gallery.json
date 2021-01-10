@@ -1,0 +1,5 @@
+{
+    "elementName": "Gallery",
+    "elementDescription": "Display media gallery by category",
+    "enableInput": "gallery"
+}

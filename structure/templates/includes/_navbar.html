@@ -1,0 +1,40 @@
+<nav id="navbar" class="navbar">
+
+    <div class="logo">
+      <a href="{{ pathFor('home') }}">{{ site.settings.siteName|default('Piton<span>CMS</span>') }}</a>
+    </div>
+
+    <input type="checkbox" name="hamburger-toggle" id="hamburger-toggle" class="toggle">
+    <label for="hamburger-toggle" class="toggle-label-hamburger"><span></span></label>
+
+
+      <ul class="nav">
+        {% for navLink in getNavigator('main') %}
+
+        {% if navLink.childNav %}
+        {# This is the case for a parent with a child nav dropdown #}
+        <li class="nav-link {% if navLink.currentPage %}active{% endif %}">
+
+          <input type="checkbox" name="sub-nav-toggle-{{ loop.index }}" class="toggle" id="sub-nav-toggle-{{ loop.index }}">
+          <label for="sub-nav-toggle-{{ loop.index }}" class="toggle-label">{{ navLink.title }}&nbsp;&nbsp; </label>
+
+          <ul class="subnav">
+            {# Loop through children #}
+            {% for child in navLink.childNav %}
+            <li class="subnav-link">
+              <a href="{{ getNavigationLink(child) }}">{{ child.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+
+        </li>
+        {% else %}
+        <li class="nav-link {% if navLink.currentPage %}active{% endif %}">
+          <a href="{{ getNavigationLink(navLink) }}">{{ navLink.title }}
+          </a>
+        </li>
+        {% endif %}
+
+        {% endfor %}
+      </ul>
+</nav>

@@ -1,0 +1,24 @@
+{# Hero Element #}
+<div class="hero">
+
+  <div class="hero__content">
+    <h1 class="hero__content-title">{{ element.title }}</h1>
+    {{ element.content }}
+    {% if element.settings.ctaTitle %}
+    <a href="{{element.settings.ctaTarget}}" target="_blank" class="btn btn-cta">{{ element.settings.ctaTitle }}</a>
+
+    {% endif %}
+  </div>
+
+  <div class="hero__image">
+    {% if element.media.filename %}
+    {% set positionStyle = 'object-position: ' ~ element.settings.placement ?? 'center' %}
+    {{ getMediaSrcSet(element.media.filename, element.media.caption, {'style': positionStyle, 'sizes': '100vw'}) }}
+    {% else %}
+    {# <img src="/assets/img/heroDefault.jpg" alt="Top of the Mountain"> #}
+    {% endif %}
+  </div>
+  <div class="hero__overlay" {% if element.settings.overlay %}
+    style="background-color: rgba({{element.settings.overlayColor}},{{element.settings.overlay }}%)" {% endif %}>
+  </div>
+</div>

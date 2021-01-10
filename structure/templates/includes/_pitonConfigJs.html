@@ -1,0 +1,15 @@
+{#
+    Piton Config JS
+    Sets runtime values
+#}
+
+<script>
+    const pitonConfig = {
+        csrfTokenName: "{{ site.csrf.name }}",
+        csrfTokenValue: "{{ site.csrf.value }}",
+        routes: {
+            submitMessage: "{{ pathFor('submitMessage') }}",
+        },
+        {% block jsPitonConfig '' %}
+    };
+</script>

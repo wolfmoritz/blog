@@ -1,0 +1,52 @@
+# Override from parent directory, everything in this directory and below is web accessible
+Allow from all
+
+# However, prevent direct directory access
+Options -Indexes
+
+<Files sitemap.xml>
+  Header set X-Robots-Tag "noindex"
+</Files>
+
+# Headers
+#Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
+#Header set Content-Security-Policy "default-src 'self'; img-src *; script-src 'self' *.googleapis.com *.gstatic.com *.bootstrapcdn.com *.statcounter.com *.google-analytics.com *.cloudflare.com *.jsdelivr.net; style-src: 'self' *.bootstrapcdn.com *.com *.cloudflare.com *.jsdelivr.net"
+#Header set X-Frame-Options SAMEORIGIN
+#Header set X-Content-Type-Options nosniff
+#Header set Referrer-Policy no-referrer-when-downgrade
+#Header set Feature-Policy 'self'
+#Header set X-XSS-Protection "1; mode=block"
+
+RewriteEngine On
+
+# Check to see if the user is attempting to access a valid file, such as an image
+# or css document, if this isn't true this sends the request to index.php.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|css|js|map|ico)$ [NC]
+RewriteRule . index.php [L]
+
+# Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 seconds"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    #ExpiresByType text/css "access plus 60 minutes"
+    #ExpiresByType text/javascript "access plus 60 minutes"
+    #ExpiresByType application/x-javascript "access plus 60 minutes"
+    #ExpiresByType text/html "access plus 60 seconds"
+</IfModule>
+
+<ifModule mod_headers.c>
+  <filesMatch "\.(ico|jpe?g|png|gif)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(css|woff)$">
+    Header set Cache-Control "public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "private"
+  </filesMatch>
+</ifModule>

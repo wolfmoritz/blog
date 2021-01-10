@@ -1,0 +1,9 @@
+// Image Element
+.imageElement {
+  img {
+    border-radius: var(--br);
+    box-shadow: var(--bs-1);
+    max-height: 450px;
+    object-fit: cover;
+  }
+}

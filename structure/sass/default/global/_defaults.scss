@@ -1,0 +1,163 @@
+/* Default Styles - Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  @include margin(0);
+  @include padding(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width     : 100vw;
+  height    : 100vh;
+  min-height: 100vh;
+}
+
+body {
+  color: var(--clr-black);
+
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-n);
+  line-height: 1.6;
+  display    : flex;
+  flex-flow  : column nowrap;
+  overflow-x : hidden;
+}
+
+img {
+  width  : 100%;
+  display: block;
+  height : auto;
+}
+
+p {
+  @include margin(1rem null null null);
+}
+
+a {
+  color          : $clr-dark-text;
+  text-decoration: none;
+
+  transition: all 250ms ease;
+
+  &:hover {
+    color: $clr-accent;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-m);
+  margin     : 0;
+  line-height: 1;
+  color      : var(--clr-accent);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+section {
+  @include padding(5rem null);
+  @include margin(0rem null null);
+}
+
+.container {
+  // @include padding(null 2rem);
+  @include margin(auto);
+  width    : 100%;
+  max-width: var(--max-width);
+
+}
+
+.footer {
+  @include margin(auto null null null);
+}
+
+.element {
+  @include padding(2rem null);
+  width  : 100%;
+  display: grid;
+  grid-template-columns:
+    minmax(1rem, 1fr) minmax(auto, 90ch) minmax(1rem, 1fr);
+
+  *+* {
+    @include margin(1.25rem null null null);
+  }
+
+  >* {
+    grid-column: 2;
+  }
+}
+
+.hero+section:first-of-type {
+
+  @include margin(#{$section-margin} null);
+}
+
+.navbar+section:first-of-type {
+
+  margin-top: calc(#{$nav-height} + #{$section-margin});
+}
+
+figure {
+
+  border-radius: var(--br);
+
+
+
+  img {
+    max-height   : 450px;
+    border-radius: var(--br);
+    box-shadow   : var(--bs);
+    object-fit   : cover;
+  }
+
+  figcaption {
+    color      : var(--clr-grey-dark);
+    font-size  : .8rem;
+    font-style : italic;
+    font-weight: 300;
+    margin-top : .25rem !important;
+    text-align : center;
+  }
+}
+
+.text-danger {
+  color: var(--clr-accent);
+}
+
+.span {
+  grid-column: 1 / -1 !important;
+
+}

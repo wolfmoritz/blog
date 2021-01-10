@@ -1,0 +1,33 @@
+{
+    "name": "pitoncms/piton",
+    "description": "Designer Forward CMS",
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://github.com/PitonCMS/Piton",
+    "authors": [
+        {
+            "name": "Wolfgang Moritz",
+            "email": "wolfmoritz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "pitoncms/engine": "dev-develop"
+        },
+    "autoload": {
+        "psr-4": {
+            "PitonCMS\\": "app/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "Piton\\Library\\Utilities\\PitonBuild::createProject"
+        ],
+        "post-update-cmd": [
+            "Piton\\Library\\Utilities\\PitonBuild::updateEngine"
+        ]
+    }
+}

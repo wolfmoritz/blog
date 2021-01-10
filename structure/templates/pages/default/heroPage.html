@@ -1,0 +1,9 @@
+{% extends 'pages/_base_layout.html' %}
+
+{% block hero %}
+{{ getBlockElementsHtml(page.blocks.heroBlock) }}
+{% endblock hero %}
+
+{% block body %}
+{{ getBlockElementsHtml(page.blocks.contentBlock) }}
+{% endblock body %}

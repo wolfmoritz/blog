@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Dependency Injection Container (DIC) Custom Configuration
+ */
+
+declare(strict_types=1);
+
+/**
+ * Override default Piton services using this file.
+ * Rename file to dependencies.php. The $container is available in this context.
+ *
+ * Example custom 404 Not Found handler to replace the built in Piton Not Found:
+    $container['notFoundHandler'] = function ($c) {
+        return function ($request, $response) use ($c) {
+            return $response->withStatus(404)
+                ->withHeader('Content-Type', 'text/html')
+                ->write('Page not found');
+        };
+    };
+ */

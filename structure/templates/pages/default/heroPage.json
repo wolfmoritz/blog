@@ -1,0 +1,24 @@
+{
+  "templateName": "With Hero",
+  "templateDescription": "Page with hero image and content blocks.",
+  "showSubTitle": false,
+  "showFeaturedImage": true,
+  "templateType": "page",
+  "blocks": [{
+      "name": "Hero Image",
+      "key": "heroBlock",
+      "description": "Large full width image",
+      "elementTypeDefault": "default/hero/hero",
+      "elementTypeOptions": [
+        "default/hero/hero"
+      ],
+      "elementCountLimit": 1
+    },
+    {
+      "name": "Content",
+      "key": "contentBlock",
+      "description": "Page Content Blocks",
+      "elementTypeDefault": "default/text/text"
+    }
+  ]
+}

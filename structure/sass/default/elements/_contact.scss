@@ -1,0 +1,52 @@
+.contactElement {
+  .contact-form {
+    display              : grid;
+  grid-template-columns: 1fr;
+    gap                  : 1rem;
+    @media screen and (min-width: $breakpoint){
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  ::placeholder {
+    color: rgba(var(--clr-grey-dark-rgb), .75);
+  }
+}
+
+.input-group {
+  display   : flex;
+  flex-flow : column nowrap;
+  align-items: baseline;
+  >*{
+    @include margin(0);
+  }
+}
+
+/* Add styles to 'label' selector */
+label {
+  font-size   : 1.2em;
+  // align-self  : flex-start;
+  // justify-self: flex-end;
+  // grid-column : 1 / 2;
+}
+
+/* Add styles to 'input' and 'textarea' selectors */
+input[type=text],
+input[type=email],
+textarea {
+  width: 100%;
+  @include padding(.75em 1em);
+  border       : 1px solid var(--clr-grey-medium);
+  border-radius: var(--br);
+  grid-column  : 2 / 3;
+  font-size    : 1rem;
+  transition   : all 125ms ease-in-out;
+}
+
+/* Add styles to show 'focus' of selector */
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  border: 2px dashed var(--clr-accent);
+  outline: none;
+}

@@ -1,0 +1,19 @@
+{
+    "navigators": [
+        {
+            "key": "main",
+            "name": "Main",
+            "description": "Top of page primary navigation."
+        },
+        {
+            "key": "footer",
+            "name": "Footer",
+            "description": "Bottom of page secondary navigation."
+        },
+        {
+            "key": "sidebar",
+            "name": "Sidebar",
+            "description": "Sidebar navigation."
+        }
+    ]
+}

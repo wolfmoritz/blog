@@ -1,0 +1,17 @@
+{# Media Group Element #}
+<section class="galleryElement element">
+  <div class="container">
+    <h2>{{ element.title }}</h2>
+
+    {{ element.content }}
+
+    <div class="gallery-wrapper">
+      {% for g in getGallery(element.gallery_id) %}
+      <a data-fancybox="gallery" class="gallery-img {{ g.orientation }} {{ g.featured }}" data-caption="{{ g.caption }}"
+        href="{{ getMediaPath(g.filename, 'large') }}">
+        <img src="{{ getMediaPath(g.filename, 'thumb') }}" alt="{{ g.caption }}" />
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
