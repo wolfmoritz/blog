@@ -25,12 +25,11 @@
 
 <body>
     {{ include("includes/_navbar.html") }}
+
     {% block hero %}
     {% endblock hero %}
 
-
     {% block body %}
-    <h2>Default body content</h2>
     {% endblock %}
 
     {{ include("includes/_footer.html") }}

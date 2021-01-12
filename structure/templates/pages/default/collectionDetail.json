@@ -1,94 +1,15 @@
 {
- "templateName": "Collection With Hero",
- "templateDescription": "Collection page with hero image and content blocks.",
+ "templateName": "Blog Post",
+ "templateDescription": "Blog post collection page.",
  "showSubTitle": false,
  "showFeaturedImage": true,
  "templateType": "collection",
  "blocks": [
      {
-         "name": "Hero Image",
-         "key": "heroBlock",
-         "description": "Large full width image",
-         "elementTypeDefault": "default/hero/hero",
-         "elementTypeOptions": [
-             "default/hero/hero"
-         ],
-         "elementCountLimit": 1
-     },
-     {
          "name": "Content",
          "key": "contentBlock",
          "description": "Page Content Blocks",
          "elementTypeDefault": "default/text/text"
-     }
- ],
- "settings": [
-     {
-         "category": "page",
-         "label": "Hero Image Overlay Percentage",
-         "key": "overlay",
-         "value": "",
-        "inputType": "number",
-         "help": "Only input overlay amount without the %"
-       },
-       {
-         "category": "page",
-         "label": "Hero Image Attachment",
-         "key": "attachment",
-         "value": "",
-         "inputType": "select",
-         "help": "Select Scroll Attachment (default is scroll)",
-         "options": [
-           {
-             "name": "Scroll",
-             "value": "Scroll"
-           },
-           {
-             "name": "Fixed",
-            "value": "Fixed"
-           }
-         ]
-       },
-       {
-         "category": "page",
-         "label": "Hero Image Vertical/Horizontal Placement",
-         "key": "placement",
-         "value": "Center Center",
-         "inputType": "select",
-         "help": "Select a placement combination to optimze your hero image above 768px.",
-         "options": [
-          
-           {
-             "name": "Top Center",
-             "value": "top center"
-           },
-      
-           {
-             "name": "Center Center",
-             "value": "Center Center"
-           },
-           
-           {
-             "name": "Bottom Center",
-            "value": "bottom center"
-           }
-         ]
-       },
-     {
-         "category": "page",
-         "label": "Hero Button Title",
-         "key": "ctaTitle",
-         "value": "",
-         "inputType": "text",
-         "help": "Enter Title for cta."
-     },
-     {
-         "category": "page",
-         "label": "Hero Button Link",
-         "key": "ctaTarget",
-         "value": "",
-         "inputType": "text",
-         "help": "Enter Target for cta."
      }
  ]
 }

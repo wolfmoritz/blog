@@ -1,10 +1,11 @@
 {# Text Element #}
+
 <section class="textElement element">
   <div class="container">
+    {% if element.title %}
     <h2>{{ element.title }}</h2>
+    {% endif %}
 
     {{ element.content }}
   </div>
-
-
 </section>

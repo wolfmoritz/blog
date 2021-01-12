@@ -2,18 +2,50 @@
 
 {% block body %}
 
-{{ getBlockElementsHtml(page.blocks.heroBlock) }}
-
-<section class="collectionDetail element">
-  <figure class="image">
+<section class="imageElement element">
+  <div class="container">
     {{ getMediaSrcSet(page.media.filename, page.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
-    <figcaption>{{ page.media.caption}}</figcaption>
-    </figure>
-
-    <div class="collectionDetail__content">
-      {{ getBlockElementsHtml(page.blocks.contentBlock) }}
+    <h2>{{ page.title }}</h2>
   </div>
 </section>
 
+{{ getBlockElementsHtml(page.blocks.contentBlock) }}
+
+<section class="contactElement element">
+  <div class="container">
+    <h2 class="span">Let Me Know What You Think.</h2>
+
+    <form class="contact-form" id="contact-form" method="post" accept-charset="utf-8" data-contact-form="true">
+      <input type="hidden" name="context" value="{{ page.title }}" />
+
+      <div class="input-group">
+        <label>Your Name</label>
+        <input type="text" class="contact-form__form-control" name="name" maxlength="100" placeholder="Name"
+          autocomplete="off">
+      </div>
+
+      <div class="input-group">
+        <label>Your Email<span class="text-danger"> *</span></label>
+        <input type="email" class="contact-form__form-control" name="email" maxlength="100" placeholder="Email address"
+          required autocomplete="off">
+      </div>
+
+      <div class="input-group span">
+        <label>Message<span class="text-danger"> *</span></label>
+        <textarea class="contact-form__form-control" rows="5" name="message" required></textarea>
+      </div>
+
+      <div class="input-group span">
+        <button class="btn btn-submit" type="submit">Submit</button>
+      </div>
+
+      <div class="input-group span">
+        <p><span class="text-danger">* </span>Required</p>
+      </div>
+
+      {{ pitonMacro.contactHoneypot() }}
+    </form>
+  </div>
+</section>
 
 {% endblock body %}
