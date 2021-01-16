@@ -6,6 +6,4 @@ cache/
 *.xml
 public/media/
 *.map
-
-# After installing PitonCMS, consider removing the vendor/ line below
 vendor/
