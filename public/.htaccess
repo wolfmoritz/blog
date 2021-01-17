@@ -9,7 +9,7 @@ Options -Indexes
 </Files>
 
 # Other Production Headers
-<If "%{HTTP_HOST} =~ /!^localhost$/">
+<If "%{HTTP_HOST} !~ /^localhost$/">
 Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
 #Header set Content-Security-Policy "default-src 'self' 'unsafe-inline'; script-src 'self' ssl.google-analytics.com *.googleapis.com  *.statcounter.com *.google-analytics.com *.fontawesome.com cdnjs.cloudflare.com; style-src 'self' fonts.gstatic.com *.googleapis.com *.fontawesome.com cdnjs.cloudflare.com; font-src 'self' fonts.gstatic.com *.fontawesome.com; img-src 'self'"
 Header set X-Frame-Options DENY
