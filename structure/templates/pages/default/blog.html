@@ -1,0 +1,18 @@
+{% extends 'pages/_base_layout.html' %}
+
+{% block body %}
+<div class="pageMedia">
+  {{ getMediaSrcSet(page.media.filename, element.media.caption, {'sizes': '(min-width: 1020px) 926px, 93.43vw'}) }}
+</div>
+
+    <h2 class="element-title">{{ page.title }}</h2>
+
+
+{{ getBlockElementsHtml(page.blocks.contentBlock) }}
+
+{% endblock body %}
+
+{% block sidebar %}
+
+
+{% endblock sidebar %}

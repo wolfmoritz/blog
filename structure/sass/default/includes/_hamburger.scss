@@ -1,7 +1,7 @@
-// Hamburger
+ // Hamburger
 
-// Hide checkboxes for toggles and remove from the document flow
-.nav-toggle{
+ // Hide checkboxes for toggles and remove from the document flow
+ .nav-toggle{
   position: absolute;
   top     : -999px !important;
   left    : -9999px !important;

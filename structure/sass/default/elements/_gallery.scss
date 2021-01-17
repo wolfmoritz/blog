@@ -1,17 +1,12 @@
-// Gallery
+// Gallery Element
 
-.galleryElement {
-  .gallery-wrapper {
-    display              : grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-template-rows   : 250px;
-    grid-gap             : 1rem;
-    @include margin(null null 2rem null);
-  }
-
-  .gallery-img {
+.gallery-wrapper {
+  @include padding(2rem null);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  .gallery-img{
     @include margin(0 null null null);
-
     img {
 
       border-radius: var(--br);

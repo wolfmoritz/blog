@@ -1,0 +1,15 @@
+{
+ "templateName": "Simple Blog Post",
+ "templateDescription": "A simple blog post with a wall of text",
+ "showSubTitle": false,
+ "showFeaturedImage": true,
+ "templateType": "collection",
+ "blocks": [
+         {
+         "name": "Content",
+         "key": "contentBlock",
+         "description": "Page Content Blocks",
+         "elementTypeDefault": "default/text/text"
+     }
+ ]
+}

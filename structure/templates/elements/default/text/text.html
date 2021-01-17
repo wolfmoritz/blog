@@ -1,11 +1,8 @@
 {# Text Element #}
 
-<section class="textElement element">
-  <div class="container">
-    {% if element.title %}
-    <h2>{{ element.title }}</h2>
-    {% endif %}
+  <div class="element">
+    <h2 class="element__title">{{ element.title }}</h2>
 
     {{ element.content }}
   </div>
-</section>
+

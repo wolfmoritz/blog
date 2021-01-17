@@ -1,7 +1,8 @@
-<footer class="footer ">
+<footer class="footer">
 
-    <div class="footer1">
-        <div class="container">
+    <div class="container">
+        <div class="footer1">
+
             <div class="footer-nav">
                 <nav class="nav-footer">
                     <h5>Navigation</h5>
@@ -45,6 +46,7 @@
 
                 </div>
             </div>
+
             <div class="footer-address">
 
                 {% if site.settings.contactAddress %}
@@ -61,14 +63,17 @@
 
         </div>
     </div>
+
     <div class="footer2">
-        <div class="container"></div>
+
         <p>{{ site.settings.siteName|default('Piton<span>CMS</span>') }} &copy; 2018 - {{ "now"|date('Y') }}</p>
         {% if site.settings.footerAuthor %}
-        <p>Built with <a href="http://pitoncms.com" target="_blank">PitonCMS</a> by <a
+        <p>Built with
+            <a href="http://pitoncms.com" target="_blank">PitonCMS </a> by <a
                 href="{{ site.settings.footerAuthorURL }} " target="_blank">{{
-                site.settings.footerAuthor }}</a></p>
+                site.settings.footerAuthor }}</a>
+        </p>
         {% endif %}
-    </div>
+
     </div>
 </footer>

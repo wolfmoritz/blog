@@ -29,8 +29,17 @@
     {% block hero %}
     {% endblock hero %}
 
-    {% block body %}
-    {% endblock %}
+
+    <div class="container">
+        <main>
+            {% block body %}
+            <h2>Default body content</h2>
+            {% endblock %}
+        </main>
+            {% block sidebar %}
+            {% endblock %}
+     
+    </div>
 
     {{ include("includes/_footer.html") }}
 

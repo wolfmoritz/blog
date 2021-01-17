@@ -1,5 +1,6 @@
+// Hero style
 .hero {
-  --hero-height: 50vh;
+  --hero-height: 65vh;
   height       : min(var(--hero-height), 1080px);
   position     : relative;
   z-index      : 100;

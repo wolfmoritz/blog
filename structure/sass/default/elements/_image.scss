@@ -1,9 +1,29 @@
-// Image Element
-.imageElement {
-  img {
+ // Image Element
+ .imageElement {
+   &__image {
+     max-height: 450px;
+
+     img {
+       border-radius: var(--br);
+       box-shadow   : var(--bs-1);
+       max-height   : 450px;
+       object-fit   : cover;
+     }
+   }
+   &__content {
+     @include margin(1rem null null null);
+   }
+
+ }
+ .pageMedia{
+   @include margin(1rem null null null);
+   img{
     border-radius: var(--br);
-    box-shadow: var(--bs-1);
-    max-height: 450px;
-    object-fit: cover;
-  }
-}
+    box-shadow   : var(--bs-1);
+     max-height: 450px;
+     object-fit: cover;
+   }
+ }
+ .imageElement__image+.imageElement__content{
+   @include margin(2rem null null);
+ }

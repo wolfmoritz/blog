@@ -5,6 +5,8 @@
   box-sizing: border-box;
   @include margin(0);
   @include padding(0);
+  // -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -19,14 +21,16 @@ body {
 }
 
 body {
-  color: var(--clr-black);
+  background-color: $bg;
+  font-family     : var(--ff-sans);
+  color           : contrast-switch($bg);
+  font-weight     : 400;
+  line-height     : 1.6;
 
-  font-family: var(--ff-sans);
-  font-weight: var(--fw-n);
-  line-height: 1.6;
-  display    : flex;
-  flex-flow  : column nowrap;
-  overflow-x : hidden;
+  display  : flex;
+  flex-flow: column nowrap;
+
+  overflow-x: hidden;
 }
 
 img {
@@ -35,18 +39,43 @@ img {
   height : auto;
 }
 
+figure {
+  border-radius: var(--br);
+  @include padding(2rem null 1rem);
+
+  img {
+    max-height   : 450px;
+    border-radius: var(--br);
+    box-shadow   : var(--bs);
+    object-fit   : cover;
+  }
+
+  figcaption {
+    color      : var(--clr-dark);
+    font-size  : .8rem;
+    font-style : italic;
+    font-weight: 300;
+    margin-top : .25rem !important;
+    text-align : center;
+  }
+}
+
 p {
   @include margin(1rem null null null);
 }
 
+.element__title+p {
+  @include margin(1rem null null null);
+}
+
 a {
-  color          : $clr-dark-text;
+  color          : contrast-switch($bg);
   text-decoration: none;
 
-  transition: all 250ms ease;
+  transition: all 125ms ease;
 
   &:hover {
-    color: $clr-accent;
+    color: var(--clr-accent);
   }
 }
 
@@ -56,19 +85,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--ff-serif);
-  font-weight: var(--fw-m);
-  margin     : 0;
-  line-height: 1;
-  color      : var(--clr-accent);
+  font-family   : var(--ff-serif);
+  line-height   : 1.1;
+  color         : $clr-accent;
+  text-transform: capitalize;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 h3 {
@@ -87,69 +115,33 @@ h6 {
   font-size: 1rem;
 }
 
-section {
-  @include padding(5rem null);
-  @include margin(0rem null null);
+main {
+  // @include padding(#{$nav-height} null 2rem);
+  padding: calc(#{$nav-height} * 1.5) 0;
 }
 
 .container {
-  // @include padding(null 2rem);
   @include margin(auto);
-  width    : 100%;
-  max-width: var(--max-width);
+  width: 100%;
 
+  display              : grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(auto, $max-container-width) minmax(2rem, 1fr);
+
+  >* {
+    grid-column: 2 / 3;
+  }
 }
 
-.footer {
-  @include margin(auto null null null);
+.hero+.container main {
+  @include margin(0);
+  @include padding(0);
 }
 
 .element {
-  @include padding(2rem null);
-  width  : 100%;
-  display: grid;
-  grid-template-columns:
-    minmax(1rem, 1fr) minmax(auto, 90ch) minmax(1rem, 1fr);
+  @include margin(1rem null);
 
-  *+* {
-    @include margin(1.25rem null null null);
-  }
-
-  >* {
-    grid-column: 2;
-  }
-}
-
-.hero+section:first-of-type {
-
-  @include margin(#{$section-margin} null);
-}
-
-.navbar+section:first-of-type {
-
-  margin-top: calc(#{$nav-height} + #{$section-margin});
-}
-
-figure {
-
-  border-radius: var(--br);
-
-
-
-  img {
-    max-height   : 450px;
-    border-radius: var(--br);
-    box-shadow   : var(--bs);
-    object-fit   : cover;
-  }
-
-  figcaption {
-    color      : var(--clr-grey-dark);
-    font-size  : .8rem;
-    font-style : italic;
-    font-weight: 300;
-    margin-top : .25rem !important;
-    text-align : center;
+  &-title {
+    @include margin(1rem null null null);
   }
 }
 
@@ -159,5 +151,4 @@ figure {
 
 .span {
   grid-column: 1 / -1 !important;
-
 }
