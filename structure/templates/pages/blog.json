@@ -9,7 +9,7 @@
          "name": "Content",
          "key": "contentBlock",
          "description": "Page Content Blocks",
-         "elementTypeDefault": "default/text/text"
+         "elementTypeDefault": "text/text"
      }
  ]
 }

@@ -9,9 +9,9 @@
          "name": "Hero Image",
          "key": "heroBlock",
          "description": "Large full width image",
-         "elementTypeDefault": "default/hero/hero",
+         "elementTypeDefault": "hero/hero",
          "elementTypeOptions": [
-             "default/hero/hero"
+             "hero/hero"
          ],
          "elementCountLimit": 1
      },
@@ -19,7 +19,7 @@
          "name": "Content",
          "key": "contentBlock",
          "description": "Page Content Blocks",
-         "elementTypeDefault": "default/text/text"
+         "elementTypeDefault": "text/text"
      }
  ],
  "settings": [
@@ -57,17 +57,17 @@
          "inputType": "select",
          "help": "Select a placement combination to optimze your hero image above 768px.",
          "options": [
-          
+
            {
              "name": "Top Center",
              "value": "top center"
            },
-      
+
            {
              "name": "Center Center",
              "value": "Center Center"
            },
-           
+
            {
              "name": "Bottom Center",
             "value": "bottom center"
