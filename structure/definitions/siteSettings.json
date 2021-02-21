@@ -16,13 +16,6 @@
         },
         {
             "category": "site",
-            "label": "Google Webmaster Verification Link",
-            "key": "googleWebMaster",
-            "value": "",
-            "inputType": "text"
-        },
-        {
-            "category": "site",
             "label": "Website Contact Email",
             "key": "contactEmail",
             "value": "",
@@ -60,20 +53,6 @@
             "category": "site",
             "label": "Website Contact Address",
             "key": "contactAddress",
-            "value": "",
-            "inputType": "textarea"
-        },
-        {
-            "category": "site",
-            "label": "Google Analytics Code",
-            "key": "googleAnalytics",
-            "value": "",
-            "inputType": "textarea"
-        },
-        {
-            "category": "site",
-            "label": "Stat Counter",
-            "key": "statCounter",
             "value": "",
             "inputType": "textarea"
         },

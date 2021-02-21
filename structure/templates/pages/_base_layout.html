@@ -5,22 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     {% if page.meta_description %}
     <meta name="description" content="{{ page.meta_description }}">
     {% endif %}
-    {% if site.settings.googleWebMaster %}
-    <meta name="google-site-verification" content="{{ site.settings.googleWebMaster }}">
-    {% endif %}
 
-    <title>{{ page.title ~ ' | ' ~ site.settings.siteName }}</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
-        integrity="sha384-s4RLYRjGGbVqKOyMGGwfxUTMOO6D7r2eom7hWZQ6BjK2Df4ZyfzLXEkonSm0KLIQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/{{ site.settings.theme|default('default') }}/css/main.css">
-    <link rel="stylesheet" href="/assets/fancybox/fancybox/fancybox.css">
+    <title>{{ page.title ~ ' | ' ~ site.settings.siteName|default('PitonCMS') }}</title>
+    <link rel="stylesheet" href="{{ baseUrl() }}/assets/{{ site.settings.theme|default('default') }}/css/main.css">
+    <link rel="stylesheet" href="{{ baseUrl() }}/assets/fancybox/fancybox/fancybox.css">
+    <link rel="stylesheet" href="{{ baseUrl() }}/admin/highlight/agate.css?v={{ site.environment.assetVersion }}">
 
-    {{ include('includes/_pitonConfigJs.html') }}
 </head>
 
 <body>
@@ -39,19 +33,24 @@
 
     {{ include("includes/_footer.html") }}
 
-    <script src="{{ baseUrl() }}/admin/js/dist/front.js"></script>
-    <script src="{{ baseUrl() }}/assets/{{ site.settings.theme|default('default') }}/js/custom.js"></script>
-    <script src="{{ baseUrl() }}/assets/fancybox/fancybox/fancybox.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"
-        integrity="sha384-0H+01+wORQpYAMaLWyObzDlXZaG1Mgzrj0DsIDeQX762Cfo2fPEycKxVmhlDjSV4" crossorigin="anonymous"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/admin/js/dist/front.js?v={{ site.environment.assetVersion }}"></script>
+    <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/assets/{{ site.settings.theme|default('default') }}/js/custom.js"></script>
+    <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/assets/fancybox/fancybox/fancybox.umd.js"></script>
+    <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/admin/highlight/highlight.pack.js?v={{ site.environment.assetVersion }}"></script>
+    <script nonce="{{ site.environment.cspNonce }}">hljs.initHighlightingOnLoad();</script>
 
-    {% if site.environment.production and site.settings.statCounter %}
-    {{ site.settings.statCounter }}
-    {% endif %}
+    {% if site.environment.production %}
+    {# When adding analytics tracking JS code besure to include the nonce key in the script tags #}
 
-    {% if site.environment.production and site.settings.googleAnalytics %}
-    {{ site.settings.googleAnalytics }}
+    <!-- Default Statcounter code for wolfmoritz  https://www.wolfmoritz.com -->
+    <script nonce="{{ site.environment.cspNonce }}">
+    var sc_project=12470024;
+    var sc_invisible=1;
+    var sc_security="8e09fb0e";
+    var sc_https=1;
+    </script>
+    <script nonce="{{ site.environment.cspNonce }}" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <!-- End of Statcounter Code -->
     {% endif %}
 </body>
 
