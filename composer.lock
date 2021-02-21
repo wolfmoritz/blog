@@ -399,12 +399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Engine.git",
-                "reference": "3023b3f5b7c134b5f1f0edd9bcdaab9ec1083d69"
+                "reference": "dffe382cddcf593bbfd8dec070a5870234aa3331"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/3023b3f5b7c134b5f1f0edd9bcdaab9ec1083d69",
-                "reference": "3023b3f5b7c134b5f1f0edd9bcdaab9ec1083d69",
+                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/dffe382cddcf593bbfd8dec070a5870234aa3331",
+                "reference": "dffe382cddcf593bbfd8dec070a5870234aa3331",
                 "shasum": ""
             },
             "require": {
@@ -413,7 +413,7 @@
                 "monolog/monolog": "~1.25.3",
                 "php": ">=7.3",
                 "phpmailer/phpmailer": "~6.1.6",
-                "pitoncms/orm": "~0.3.5",
+                "pitoncms/orm": "~0.3.6",
                 "pitoncms/pagination": "^0.4.0",
                 "pitoncms/session": "~2.1.4",
                 "slim/slim": "~3.12.3",
@@ -442,20 +442,20 @@
                 "issues": "https://github.com/PitonCMS/Engine/issues",
                 "source": "https://github.com/PitonCMS/Engine/tree/develop"
             },
-            "time": "2021-02-20T17:37:27+00:00"
+            "time": "2021-02-21T10:30:49+00:00"
         },
         {
             "name": "pitoncms/orm",
-            "version": "0.3.5",
+            "version": "0.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/ORM.git",
-                "reference": "74e986b30de58af84e2aa4d728389e6d44efeb50"
+                "reference": "d0b67db57d400200f3e4fba9f5d54c37c1cdef99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/ORM/zipball/74e986b30de58af84e2aa4d728389e6d44efeb50",
-                "reference": "74e986b30de58af84e2aa4d728389e6d44efeb50",
+                "url": "https://api.github.com/repos/PitonCMS/ORM/zipball/d0b67db57d400200f3e4fba9f5d54c37c1cdef99",
+                "reference": "d0b67db57d400200f3e4fba9f5d54c37c1cdef99",
                 "shasum": ""
             },
             "require": {
@@ -489,9 +489,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PitonCMS/ORM/issues",
-                "source": "https://github.com/PitonCMS/ORM/tree/0.3.5"
+                "source": "https://github.com/PitonCMS/ORM/tree/0.3.6"
             },
-            "time": "2020-02-16T22:03:33+00:00"
+            "time": "2021-02-21T10:28:37+00:00"
         },
         {
             "name": "pitoncms/pagination",
