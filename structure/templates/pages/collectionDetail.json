@@ -9,7 +9,6 @@
          "name": "Hero Image",
          "key": "heroBlock",
          "description": "Large full width image",
-         "elementTypeDefault": "hero/hero",
          "elementTypeOptions": [
              "hero/hero"
          ],
@@ -18,8 +17,7 @@
      {
          "name": "Content",
          "key": "contentBlock",
-         "description": "Page Content Blocks",
-         "elementTypeDefault": "text/text"
+         "description": "Page Content Blocks"
      }
  ],
  "settings": [

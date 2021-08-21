@@ -8,8 +8,7 @@
          {
          "name": "Content",
          "key": "contentBlock",
-         "description": "Page Content Blocks",
-         "elementTypeDefault": "text/text"
+         "description": "Page Content Blocks"
      }
  ]
 }

@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=7.3",
-        "pitoncms/engine": "dev-develop"
+        "pitoncms/engine": "~0"
         },
     "autoload": {
         "psr-4": {

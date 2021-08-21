@@ -7,8 +7,7 @@
         {
             "name": "Content",
             "key": "contentBlock",
-            "description": "Home page text areas",
-            "elementTypeDefault": "text/text"
+            "description": "Home page text areas"
         }
     ]
 }
