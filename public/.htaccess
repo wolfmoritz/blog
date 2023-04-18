@@ -10,11 +10,13 @@ Options -Indexes
 
 RewriteEngine On
 
+RewriteRule ^download\/.*$ / [R=410,L]
+
 # Check to see if the user is attempting to access a valid file, such as an image
 # or css document, if this isn't true this sends the request to index.php.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\.(jpe?g|png|gif|css|js|map|ico|txt|svg)$ [NC]
-RewriteRule . index.php [L]
+RewriteRule ^ index.php [QSA,L]
 
 # Caching
 <IfModule mod_expires.c>
