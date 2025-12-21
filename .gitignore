@@ -7,3 +7,4 @@ cache/
 public/media/
 *.map
 vendor/
+.php-cs-fixer.dist.php

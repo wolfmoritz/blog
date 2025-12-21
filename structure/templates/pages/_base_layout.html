@@ -14,7 +14,7 @@
     <title>{{ page.title ~ ' | ' ~ site.settings.siteName|default('PitonCMS') }}</title>
     <link rel="stylesheet" href="{{ baseUrl() }}/assets/{{ site.settings.theme|default('default') }}/css/main.css">
     <link rel="stylesheet" href="{{ baseUrl() }}/assets/fancybox/fancybox/fancybox.css">
-    <link rel="stylesheet" href="{{ baseUrl() }}/admin/highlight/agate.css?v={{ site.environment.assetVersion }}">
+    <link rel="stylesheet" href="{{ baseUrl() }}/admin/highlight/agate.min.css?v={{ site.environment.assetVersion }}">
 
 </head>
 
@@ -37,7 +37,7 @@
     <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/admin/js/dist/front.js?v={{ site.environment.assetVersion }}"></script>
     <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/assets/{{ site.settings.theme|default('default') }}/js/custom.js"></script>
     <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/assets/fancybox/fancybox/fancybox.umd.js"></script>
-    <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/admin/highlight/highlight.pack.js?v={{ site.environment.assetVersion }}"></script>
+    <script nonce="{{ site.environment.cspNonce }}" src="{{ baseUrl() }}/admin/highlight/highlight.min.js?v={{ site.environment.assetVersion }}"></script>
     <script nonce="{{ site.environment.cspNonce }}">hljs.initHighlightingOnLoad();</script>
 
     {% if site.environment.production %}
