@@ -1,34 +1,23 @@
-version: '3.1'
-
 services:
   web:
     build: ./docker/web
-    image: wolfmoritz
     ports:
       - "80:80"
-      - "443:443"
+    tty: true
     volumes:
       - .:/var/www/wolfmoritz
-    depends_on:
-      - db
-    tty: true
-    secrets:
-      - host_ssh_key
-    command: bash -c '/usr/local/bin/wait-for-it db:3306 -t 60 -- /usr/local/bin/run'
+      - ./docker/web/apache-host.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./docker/web/99-dev.ini:/usr/local/etc/php/conf.d/99-dev.ini
 
   db:
-    platform: linux/x86_64
-    image: mysql:5.7
+    platform: linux/arm64
+    image: mysql:8.0
     ports:
       - "3306:3306"
     volumes:
       - ~/.mysql-data/wolfmoritz:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=rootpassword
-      - MYSQL_DATABASE=wolfmoritz
-      - MYSQL_USER=wolfmoritz
-      - MYSQL_PASSWORD=wolfmoritz
-
-secrets:
-  host_ssh_key:
-    file: ~/.ssh/id_rsa
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}

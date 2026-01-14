@@ -1,10 +1,17 @@
-# Things to ignore
-config/config.local.php
+# Files to ignore
+config.local.php
+.env
+composer.local.json
+composer.local.lock
+docker-compose.override.yml
+sitemap.xml
+*.map
+*.code-workspace
+piton-installed.lock
+
+# Directories to ignore
 logs/
 cache/
 .sass-cache/
-*.xml
 public/media/
-*.map
 vendor/
-.php-cs-fixer.dist.php

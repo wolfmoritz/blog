@@ -1,36 +1,34 @@
-FROM ubuntu:20.04
+# Base image: PHP 8.4 with Apache
+FROM php:8.4-apache
 
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && \
-    apt-get -y install software-properties-common && \
-    apt-get install -y \
-      apache2 \
-      php7.4 \
-      php7.4-cli \
-      libapache2-mod-php7.4 \
-      php-apcu \
-      php-xdebug \
-      php7.4-gd \
-      php7.4-json \
-      php7.4-ldap \
-      php7.4-mbstring \
-      php7.4-mysql \
-      # php7.4-pgsql \
-      # php7.4-sqlite3 \
-      php7.4-xml \
-      php7.4-xsl \
-      php7.4-zip \
-      # php7.4-soap \
-      # php7.4-opcache \
-      nano \
-      sendmail \
-      composer \
-      php-curl
+# Install system utilities
+RUN apt-get update && apt-get install -y \
+    nano \
+    curl \
+    zip \
+    unzip \
+    libmagickwand-dev \
+    libzip-dev \
+    libonig-dev \
+    libxml2-dev \
+    build-essential \
+    git \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY apache-host.conf /etc/apache2/sites-available/000-default.conf
-COPY run.sh /usr/local/bin/run
-RUN chmod +x /usr/local/bin/run
-COPY wait-for-it.sh /usr/local/bin/wait-for-it
-RUN chmod +x /usr/local/bin/wait-for-it
+# Enable Apache mod_rewrite
+RUN a2enmod rewrite headers
 
-EXPOSE 80
+# Install PHP extensions
+RUN docker-php-ext-install \
+    pdo_mysql \
+    bcmath \
+    mbstring
+
+# Install Imagick extension
+RUN pecl install imagick && docker-php-ext-enable imagick
+
+# Install Xdebug
+RUN pecl install xdebug && docker-php-ext-enable xdebug
+
+# Install Composer globally
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer

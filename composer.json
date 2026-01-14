@@ -2,7 +2,7 @@
     "name": "pitoncms/piton",
     "description": "Designer Forward CMS",
     "type": "project",
-    "license": "MIT",
+    "license": "AGPL-3.0-or-later",
     "homepage": "https://github.com/PitonCMS/Piton",
     "authors": [
         {
@@ -11,8 +11,8 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
-        "pitoncms/engine": "~0"
+        "php": ">=8.3",
+        "pitoncms/engine": "^1.0.2"
         },
     "autoload": {
         "psr-4": {
