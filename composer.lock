@@ -969,16 +969,16 @@
         },
         {
             "name": "pitoncms/engine",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Engine.git",
-                "reference": "e2a46cc2931f342420629e76f53e6e3545d6d433"
+                "reference": "6a634287b536ec3a4266737faba9b9439a046239"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/e2a46cc2931f342420629e76f53e6e3545d6d433",
-                "reference": "e2a46cc2931f342420629e76f53e6e3545d6d433",
+                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/6a634287b536ec3a4266737faba9b9439a046239",
+                "reference": "6a634287b536ec3a4266737faba9b9439a046239",
                 "shasum": ""
             },
             "require": {
@@ -1016,9 +1016,9 @@
             "homepage": "https://github.com/PitonCMS/Engine",
             "support": {
                 "issues": "https://github.com/PitonCMS/Engine/issues",
-                "source": "https://github.com/PitonCMS/Engine/tree/1.0.2"
+                "source": "https://github.com/PitonCMS/Engine/tree/1.0.3"
             },
-            "time": "2026-01-14T12:28:46+00:00"
+            "time": "2026-01-15T14:15:25+00:00"
         },
         {
             "name": "pitoncms/orm",
@@ -1118,16 +1118,16 @@
         },
         {
             "name": "pitoncms/session",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Session.git",
-                "reference": "4ccfdcd59d41199d5b97b31e8430c68176f8d3d3"
+                "reference": "a75c2b519c0e642489276cb2f4ccb8762c3ebea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Session/zipball/4ccfdcd59d41199d5b97b31e8430c68176f8d3d3",
-                "reference": "4ccfdcd59d41199d5b97b31e8430c68176f8d3d3",
+                "url": "https://api.github.com/repos/PitonCMS/Session/zipball/a75c2b519c0e642489276cb2f4ccb8762c3ebea6",
+                "reference": "a75c2b519c0e642489276cb2f4ccb8762c3ebea6",
                 "shasum": ""
             },
             "require": {
@@ -1160,9 +1160,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PitonCMS/Session/issues",
-                "source": "https://github.com/PitonCMS/Session/tree/3.0.0"
+                "source": "https://github.com/PitonCMS/Session/tree/3.1.0"
             },
-            "time": "2026-01-13T16:30:23+00:00"
+            "time": "2026-01-15T14:07:28+00:00"
         },
         {
             "name": "psr/container",
