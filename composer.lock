@@ -204,27 +204,27 @@
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v2.0.8",
+            "version": "v2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "7581a4407012f5f53365e11bafc520fd7f36bc9b"
+                "reference": "8f631589ab07b7b52fead814965f5a800459cb3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/7581a4407012f5f53365e11bafc520fd7f36bc9b",
-                "reference": "7581a4407012f5f53365e11bafc520fd7f36bc9b",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/8f631589ab07b7b52fead814965f5a800459cb3e",
+                "reference": "8f631589ab07b7b52fead814965f5a800459cb3e",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1"
             },
             "require-dev": {
-                "illuminate/support": "^10.0|^11.0|^12.0",
+                "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
                 "nesbot/carbon": "^2.67|^3.0",
                 "pestphp/pest": "^2.36|^3.0|^4.0",
                 "phpstan/phpstan": "^2.0",
-                "symfony/var-dumper": "^6.2.0|^7.0.0"
+                "symfony/var-dumper": "^6.2.0|^7.0.0|^8.0.0"
             },
             "type": "library",
             "extra": {
@@ -261,7 +261,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2026-01-08T16:22:46+00:00"
+            "time": "2026-02-03T06:55:34+00:00"
         },
         {
             "name": "league/commonmark",
@@ -621,16 +621,16 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.1",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72"
+                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/c99059c0315591f1a0db7ad6002000288ab8dc72",
-                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72",
+                "url": "https://api.github.com/repos/nette/utils/zipball/f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
+                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
                 "shasum": ""
             },
             "require": {
@@ -643,7 +643,7 @@
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "phpstan/phpstan": "^2.0@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -704,9 +704,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.1"
+                "source": "https://github.com/nette/utils/tree/v4.1.2"
             },
-            "time": "2025-12-22T12:14:32+00:00"
+            "time": "2026-02-03T17:21:09+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -969,28 +969,28 @@
         },
         {
             "name": "pitoncms/engine",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Engine.git",
-                "reference": "862d6f8b9a63fb3a303a4794c49cdced3ab03715"
+                "reference": "84ccd572dc9daf77c7a319cfab76a90d6974299b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/862d6f8b9a63fb3a303a4794c49cdced3ab03715",
-                "reference": "862d6f8b9a63fb3a303a4794c49cdced3ab03715",
+                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/84ccd572dc9daf77c7a319cfab76a90d6974299b",
+                "reference": "84ccd572dc9daf77c7a319cfab76a90d6974299b",
                 "shasum": ""
             },
             "require": {
                 "justinrainbow/json-schema": "^5.2.10",
                 "league/commonmark": "^2.8",
                 "monolog/monolog": "^2.3.1",
-                "php": ">=8.3",
+                "php": "^8.2",
                 "php-di/php-di": "^7.1",
                 "phpmailer/phpmailer": "^6.5.0",
-                "pitoncms/orm": "^1.0.0",
-                "pitoncms/pagination": "^1.0.2",
-                "pitoncms/session": "^3.1.0",
+                "pitoncms/orm": "^1.0.1",
+                "pitoncms/pagination": "^1.0.3",
+                "pitoncms/session": "^3.1.1",
                 "slim/psr7": "^1.8",
                 "slim/slim": "^4.15",
                 "slim/twig-view": "^3.4",
@@ -1016,26 +1016,26 @@
             "homepage": "https://github.com/PitonCMS/Engine",
             "support": {
                 "issues": "https://github.com/PitonCMS/Engine/issues",
-                "source": "https://github.com/PitonCMS/Engine/tree/1.0.6"
+                "source": "https://github.com/PitonCMS/Engine/tree/1.0.7"
             },
-            "time": "2026-01-19T17:45:06+00:00"
+            "time": "2026-02-06T10:52:02+00:00"
         },
         {
             "name": "pitoncms/orm",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/ORM.git",
-                "reference": "f874cf19f4870d9c0457e91b374f669085d4d885"
+                "reference": "b1c18aa87e6b25b1085941da22b3e18e57ff1caf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/ORM/zipball/f874cf19f4870d9c0457e91b374f669085d4d885",
-                "reference": "f874cf19f4870d9c0457e91b374f669085d4d885",
+                "url": "https://api.github.com/repos/PitonCMS/ORM/zipball/b1c18aa87e6b25b1085941da22b3e18e57ff1caf",
+                "reference": "b1c18aa87e6b25b1085941da22b3e18e57ff1caf",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3"
+                "php": "^8.0"
             },
             "type": "library",
             "autoload": {
@@ -1065,26 +1065,26 @@
             ],
             "support": {
                 "issues": "https://github.com/PitonCMS/ORM/issues",
-                "source": "https://github.com/PitonCMS/ORM/tree/1.0.0"
+                "source": "https://github.com/PitonCMS/ORM/tree/1.0.1"
             },
-            "time": "2026-01-13T16:32:46+00:00"
+            "time": "2026-02-05T12:12:25+00:00"
         },
         {
             "name": "pitoncms/pagination",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Pagination.git",
-                "reference": "07ad4757cb0366e7868309098166dd826fbfc523"
+                "reference": "0cfcbe419c2cb0318cfc403c5fcff86fd6b25c95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Pagination/zipball/07ad4757cb0366e7868309098166dd826fbfc523",
-                "reference": "07ad4757cb0366e7868309098166dd826fbfc523",
+                "url": "https://api.github.com/repos/PitonCMS/Pagination/zipball/0cfcbe419c2cb0318cfc403c5fcff86fd6b25c95",
+                "reference": "0cfcbe419c2cb0318cfc403c5fcff86fd6b25c95",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3"
+                "php": "^7.4 || ^8.0"
             },
             "type": "library",
             "autoload": {
@@ -1112,26 +1112,26 @@
             ],
             "support": {
                 "issues": "https://github.com/PitonCMS/Pagination/issues",
-                "source": "https://github.com/PitonCMS/Pagination/tree/1.0.2"
+                "source": "https://github.com/PitonCMS/Pagination/tree/1.0.3"
             },
-            "time": "2026-01-13T16:29:07+00:00"
+            "time": "2026-02-04T15:52:45+00:00"
         },
         {
             "name": "pitoncms/session",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Session.git",
-                "reference": "a75c2b519c0e642489276cb2f4ccb8762c3ebea6"
+                "reference": "f1b2b11b7e604561edf588f3a8d8f68b2258542c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Session/zipball/a75c2b519c0e642489276cb2f4ccb8762c3ebea6",
-                "reference": "a75c2b519c0e642489276cb2f4ccb8762c3ebea6",
+                "url": "https://api.github.com/repos/PitonCMS/Session/zipball/f1b2b11b7e604561edf588f3a8d8f68b2258542c",
+                "reference": "f1b2b11b7e604561edf588f3a8d8f68b2258542c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.3"
+                "php": "^7.4 || ^8.0"
             },
             "type": "library",
             "autoload": {
@@ -1160,9 +1160,9 @@
             ],
             "support": {
                 "issues": "https://github.com/PitonCMS/Session/issues",
-                "source": "https://github.com/PitonCMS/Session/tree/3.1.0"
+                "source": "https://github.com/PitonCMS/Session/tree/3.1.1"
             },
-            "time": "2026-01-15T14:07:28+00:00"
+            "time": "2026-02-05T12:11:03+00:00"
         },
         {
             "name": "psr/container",
@@ -2303,16 +2303,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.22.2",
+            "version": "v3.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "946ddeafa3c9f4ce279d1f34051af041db0e16f2"
+                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/946ddeafa3c9f4ce279d1f34051af041db0e16f2",
-                "reference": "946ddeafa3c9f4ce279d1f34051af041db0e16f2",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
+                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
                 "shasum": ""
             },
             "require": {
@@ -2366,7 +2366,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.22.2"
+                "source": "https://github.com/twigphp/Twig/tree/v3.23.0"
             },
             "funding": [
                 {
@@ -2378,7 +2378,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-14T11:28:47+00:00"
+            "time": "2026-01-23T21:00:41+00:00"
         }
     ],
     "packages-dev": [],
