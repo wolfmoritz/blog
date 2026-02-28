@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8813a637ffbc0ce65ef914df1b517e8d",
+    "content-hash": "d14d4cc164325e611a78512485f0f9ef",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -139,16 +139,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.3.1",
+            "version": "5.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "b5a44b6391a3bbb75c9f2b73e1ef03d6045e1e20"
+                "reference": "2f7abf648939847a789c55c206d4cb9dd0d53e2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/b5a44b6391a3bbb75c9f2b73e1ef03d6045e1e20",
-                "reference": "b5a44b6391a3bbb75c9f2b73e1ef03d6045e1e20",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/2f7abf648939847a789c55c206d4cb9dd0d53e2c",
+                "reference": "2f7abf648939847a789c55c206d4cb9dd0d53e2c",
                 "shasum": ""
             },
             "require": {
@@ -198,22 +198,22 @@
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/5.3.1"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/5.3.2"
             },
-            "time": "2025-12-12T08:56:22+00:00"
+            "time": "2026-02-27T12:33:19+00:00"
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v2.0.9",
+            "version": "v2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "8f631589ab07b7b52fead814965f5a800459cb3e"
+                "reference": "870fc81d2f879903dfc5b60bf8a0f94a1609e669"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/8f631589ab07b7b52fead814965f5a800459cb3e",
-                "reference": "8f631589ab07b7b52fead814965f5a800459cb3e",
+                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/870fc81d2f879903dfc5b60bf8a0f94a1609e669",
+                "reference": "870fc81d2f879903dfc5b60bf8a0f94a1609e669",
                 "shasum": ""
             },
             "require": {
@@ -261,7 +261,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-            "time": "2026-02-03T06:55:34+00:00"
+            "time": "2026-02-20T19:59:49+00:00"
         },
         {
             "name": "league/commonmark",
@@ -556,16 +556,16 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.3.4",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "086497a2f34b82fede9b5a41cc8e131d087cd8f7"
+                "reference": "f0ab1a3cda782dbc5da270d28545236aa80c4002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/086497a2f34b82fede9b5a41cc8e131d087cd8f7",
-                "reference": "086497a2f34b82fede9b5a41cc8e131d087cd8f7",
+                "url": "https://api.github.com/repos/nette/schema/zipball/f0ab1a3cda782dbc5da270d28545236aa80c4002",
+                "reference": "f0ab1a3cda782dbc5da270d28545236aa80c4002",
                 "shasum": ""
             },
             "require": {
@@ -573,8 +573,10 @@
                 "php": "8.1 - 8.5"
             },
             "require-dev": {
+                "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.6",
-                "phpstan/phpstan": "^2.0@stable",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1.39@stable",
                 "tracy/tracy": "^2.8"
             },
             "type": "library",
@@ -615,22 +617,22 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.3.4"
+                "source": "https://github.com/nette/schema/tree/v1.3.5"
             },
-            "time": "2026-02-08T02:54:00+00:00"
+            "time": "2026-02-23T03:47:12+00:00"
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.2",
+            "version": "v4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5"
+                "reference": "bb3ea637e3d131d72acc033cfc2746ee893349fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
-                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
+                "url": "https://api.github.com/repos/nette/utils/zipball/bb3ea637e3d131d72acc033cfc2746ee893349fe",
+                "reference": "bb3ea637e3d131d72acc033cfc2746ee893349fe",
                 "shasum": ""
             },
             "require": {
@@ -642,8 +644,10 @@
             },
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
+                "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan": "^2.0@stable",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -704,9 +708,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.2"
+                "source": "https://github.com/nette/utils/tree/v4.1.3"
             },
-            "time": "2026-02-03T17:21:09+00:00"
+            "time": "2026-02-13T03:05:33+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -969,16 +973,16 @@
         },
         {
             "name": "pitoncms/engine",
-            "version": "1.0.8",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PitonCMS/Engine.git",
-                "reference": "0e63529f4b10dddf5059c9dba130f4a4f99d6bc1"
+                "reference": "14c411ba80a652ffa6825f8b152c9021a09abfe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/0e63529f4b10dddf5059c9dba130f4a4f99d6bc1",
-                "reference": "0e63529f4b10dddf5059c9dba130f4a4f99d6bc1",
+                "url": "https://api.github.com/repos/PitonCMS/Engine/zipball/14c411ba80a652ffa6825f8b152c9021a09abfe8",
+                "reference": "14c411ba80a652ffa6825f8b152c9021a09abfe8",
                 "shasum": ""
             },
             "require": {
@@ -1016,9 +1020,9 @@
             "homepage": "https://github.com/PitonCMS/Engine",
             "support": {
                 "issues": "https://github.com/PitonCMS/Engine/issues",
-                "source": "https://github.com/PitonCMS/Engine/tree/1.0.8"
+                "source": "https://github.com/PitonCMS/Engine/tree/1.0.12"
             },
-            "time": "2026-02-08T14:06:33+00:00"
+            "time": "2026-02-28T13:16:10+00:00"
         },
         {
             "name": "pitoncms/orm",
