@@ -6,6 +6,7 @@
   </div>
 
   <h2 class="element-title">{{ page.title }}</h2>
+  <p style="font-weight:bold">{{ page.published_date|date("F j, Y") }}</p>
 
   {{ getBlockElementsHtml(page.blocks.contentBlock) }}
 
